@@ -48,13 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Display drink card
     const displayDrinkCard = (drink, category) => {
   const card = document.createElement("div");
-  card.classList.add("col-md-4", "d-flex", "align-items-stretch");
+  card.classList.add("col-md-4", "d-flex", "align-items-stretch", "sm-container");
 
   card.innerHTML = `
-    <div class="card">
+    <div class="card shadow">
       <img src="${drink.strDrinkThumb}" class="card-img-top" alt="${drink.strDrink}">
       <div class="card-body">
-        <h5 class="card-title">Name: ${drink.strDrink}</h5>
+        <h5 class="card-title text-center">Name: ${drink.strDrink}</h5>
         <p><strong>Category:</strong> ${category}</p>
         <p><strong>Instruction:</strong> ${drink.strInstructions.split(" ").slice(0, 15).join(" ")}...</p>
         <div class="d-flex justify-content-between mt-auto">
